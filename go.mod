@@ -3,8 +3,10 @@ module rsc.io/gaby
 go 1.23
 
 require (
+	cloud.google.com/go/firestore v1.15.0
 	github.com/cockroachdb/pebble v1.1.0
 	github.com/google/generative-ai-go v0.13.0
+	golang.org/x/net v0.26.0
 	golang.org/x/tools v0.22.0
 	google.golang.org/api v0.178.0
 	rsc.io/markdown v0.0.0-20240603215554-74725d8a840a
@@ -57,7 +59,6 @@ require (
 	go.opentelemetry.io/otel/trace v1.26.0 // indirect
 	golang.org/x/crypto v0.24.0 // indirect
 	golang.org/x/exp v0.0.0-20230626212559-97b1e661b5df // indirect
-	golang.org/x/net v0.26.0 // indirect
 	golang.org/x/oauth2 v0.20.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/sys v0.21.0 // indirect
