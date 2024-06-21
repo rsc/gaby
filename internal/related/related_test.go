@@ -141,33 +141,33 @@ func checkEdits(t *testing.T, edits []*github.TestingEdit, want map[int64]string
 	}
 }
 
-var post13 = unQUOT(`**Similar Issues**
+var post13 = unQUOT(`**Related Issues**
 
- - [goldmark and markdown diff with h1 inside p #6](https://github.com/rsc/markdown/issues/6) <!-- score=0.92657 -->
- - [Support escaped \QUOT|\QUOT in table cells #9](https://github.com/rsc/markdown/issues/9) <!-- score=0.91858 -->
- - [markdown: fix markdown printing for inline code #12](https://github.com/rsc/markdown/issues/12) <!-- score=0.91325 -->
- - [markdown: emit Info in CodeBlock markdown #18](https://github.com/rsc/markdown/issues/18) <!-- score=0.91129 -->
+ - [goldmark and markdown diff with h1 inside p #6 (closed)](https://github.com/rsc/markdown/issues/6) <!-- score=0.92657 -->
+ - [Support escaped \QUOT|\QUOT in table cells #9 (closed)](https://github.com/rsc/markdown/issues/9) <!-- score=0.91858 -->
+ - [markdown: fix markdown printing for inline code #12 (closed)](https://github.com/rsc/markdown/issues/12) <!-- score=0.91325 -->
+ - [markdown: emit Info in CodeBlock markdown #18 (closed)](https://github.com/rsc/markdown/issues/18) <!-- score=0.91129 -->
  - [feature: synthesize lowercase anchors for heading #19](https://github.com/rsc/markdown/issues/19) <!-- score=0.90867 -->
- - [Replace newlines with spaces in alt text #4](https://github.com/rsc/markdown/issues/4) <!-- score=0.90859 -->
- - [allow capital X in task list items #2](https://github.com/rsc/markdown/issues/2) <!-- score=0.90850 -->
+ - [Replace newlines with spaces in alt text #4 (closed)](https://github.com/rsc/markdown/issues/4) <!-- score=0.90859 -->
+ - [allow capital X in task list items #2 (closed)](https://github.com/rsc/markdown/issues/2) <!-- score=0.90850 -->
  - [build(deps): bump golang.org/x/text from 0.3.6 to 0.3.8 in /rmplay #10](https://github.com/rsc/tmp/issues/10) <!-- score=0.90453 -->
- - [Render reference links in Markdown #14](https://github.com/rsc/markdown/issues/14) <!-- score=0.90175 -->
- - [Render reference links in Markdown #15](https://github.com/rsc/markdown/issues/15) <!-- score=0.90103 -->
+ - [Render reference links in Markdown #14 (closed)](https://github.com/rsc/markdown/issues/14) <!-- score=0.90175 -->
+ - [Render reference links in Markdown #15 (closed)](https://github.com/rsc/markdown/issues/15) <!-- score=0.90103 -->
 
 <sub>(Emoji vote if this was helpful or unhelpful; more detailed feedback welcome in [this discussion](https://github.com/golang/go/discussions/67901).)</sub>
 `)
 
-var post19 = unQUOT(`**Similar Issues**
+var post19 = unQUOT(`**Related Issues**
 
- - [allow capital X in task list items #2](https://github.com/rsc/markdown/issues/2) <!-- score=0.92943 -->
- - [Support escaped \QUOT|\QUOT in table cells #9](https://github.com/rsc/markdown/issues/9) <!-- score=0.91994 -->
- - [goldmark and markdown diff with h1 inside p #6](https://github.com/rsc/markdown/issues/6) <!-- score=0.91813 -->
- - [Render reference links in Markdown #14](https://github.com/rsc/markdown/issues/14) <!-- score=0.91513 -->
- - [Render reference links in Markdown #15](https://github.com/rsc/markdown/issues/15) <!-- score=0.91487 -->
- - [Empty column heading not recognized in table #7](https://github.com/rsc/markdown/issues/7) <!-- score=0.90874 -->
+ - [allow capital X in task list items #2 (closed)](https://github.com/rsc/markdown/issues/2) <!-- score=0.92943 -->
+ - [Support escaped \QUOT|\QUOT in table cells #9 (closed)](https://github.com/rsc/markdown/issues/9) <!-- score=0.91994 -->
+ - [goldmark and markdown diff with h1 inside p #6 (closed)](https://github.com/rsc/markdown/issues/6) <!-- score=0.91813 -->
+ - [Render reference links in Markdown #14 (closed)](https://github.com/rsc/markdown/issues/14) <!-- score=0.91513 -->
+ - [Render reference links in Markdown #15 (closed)](https://github.com/rsc/markdown/issues/15) <!-- score=0.91487 -->
+ - [Empty column heading not recognized in table #7 (closed)](https://github.com/rsc/markdown/issues/7) <!-- score=0.90874 -->
  - [Correctly render reference links in Markdown #13](https://github.com/rsc/markdown/issues/13) <!-- score=0.90867 -->
- - [markdown: fix markdown printing for inline code #12](https://github.com/rsc/markdown/issues/12) <!-- score=0.90795 -->
- - [Replace newlines with spaces in alt text #4](https://github.com/rsc/markdown/issues/4) <!-- score=0.90278 -->
+ - [markdown: fix markdown printing for inline code #12 (closed)](https://github.com/rsc/markdown/issues/12) <!-- score=0.90795 -->
+ - [Replace newlines with spaces in alt text #4 (closed)](https://github.com/rsc/markdown/issues/4) <!-- score=0.90278 -->
  - [build(deps): bump golang.org/x/text from 0.3.6 to 0.3.8 in /rmplay #10](https://github.com/rsc/tmp/issues/10) <!-- score=0.90259 -->
 
 <sub>(Emoji vote if this was helpful or unhelpful; more detailed feedback welcome in [this discussion](https://github.com/golang/go/discussions/67901).)</sub>

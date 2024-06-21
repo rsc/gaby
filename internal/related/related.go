@@ -223,19 +223,20 @@ Watcher:
 			continue
 		}
 		var buf bytes.Buffer
-		fmt.Fprintf(&buf, "**Similar Issues**\n\n")
+		fmt.Fprintf(&buf, "**Related Issues**\n\n")
 		for _, r := range results {
 			title := r.ID
 			if d, ok := p.docs.Get(r.ID); ok {
 				title = d.Title
 			}
-			num := ""
-			if strings.Contains(r.ID, "/issues/") {
-				if i := strings.LastIndex(r.ID, "/"); i >= 0 {
-					num = " #" + r.ID[i+1:]
+			info := ""
+			if issue, err := p.github.LookupIssueURL(r.ID); err == nil {
+				info = fmt.Sprint(" #", issue.Number)
+				if issue.ClosedAt != "" {
+					info += " (closed)"
 				}
 			}
-			fmt.Fprintf(&buf, " - [%s%s](%s) <!-- score=%.5f -->\n", markdownEscape(title), num, r.ID, r.Score)
+			fmt.Fprintf(&buf, " - [%s%s](%s) <!-- score=%.5f -->\n", markdownEscape(title), info, r.ID, r.Score)
 		}
 		fmt.Fprintf(&buf, "\n<sub>(Emoji vote if this was helpful or unhelpful; more detailed feedback welcome in [this discussion](https://github.com/golang/go/discussions/67901).)</sub>\n")
 

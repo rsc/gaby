@@ -6,6 +6,7 @@ package github
 
 import (
 	"encoding/json"
+	"fmt"
 	"iter"
 	"math"
 	"strconv"
@@ -15,6 +16,34 @@ import (
 	"rsc.io/gaby/internal/storage/timed"
 	"rsc.io/ordered"
 )
+
+// LookupIssueURL looks up an issue by URL,
+// only consulting the database (not actual GitHub).
+func (c *Client) LookupIssueURL(url string) (*Issue, error) {
+	bad := func() (*Issue, error) {
+		return nil, fmt.Errorf("not a github URL: %q", url)
+	}
+	proj, ok := strings.CutPrefix(url, "https://github.com/")
+	if !ok {
+		return bad()
+	}
+	i := strings.LastIndex(proj, "/issues/")
+	if i < 0 {
+		return bad()
+	}
+	proj, num := proj[:i], proj[i+len("/issues/"):]
+	n, err := strconv.ParseInt(num, 10, 64)
+	if err != nil || n <= 0 {
+		return bad()
+	}
+
+	for e := range c.Events(proj, n, n) {
+		if e.API == "/issues" {
+			return e.Typed.(*Issue), nil
+		}
+	}
+	return nil, fmt.Errorf("%s#%d not in database", proj, n)
+}
 
 // An Event is a single GitHub issue event stored in the database.
 type Event struct {
