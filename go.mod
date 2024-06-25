@@ -1,6 +1,6 @@
 module rsc.io/gaby
 
-go 1.23
+go 1.23rc1
 
 require (
 	cloud.google.com/go/firestore v1.15.0
