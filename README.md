@@ -1,1 +1,1 @@
-(Docs at <https://pkg.go.dev/rsc.io/gaby>.)
+Moved to <https://golang.org/x/oscar/internal/gaby>.
